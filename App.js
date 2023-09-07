@@ -14,12 +14,19 @@ export default function App() {
     key: Math.random().toString()}]);
   };
 
+  function deleteGoalHandler(key) {
+    console.log(key);
+    setCourseGoal((currentCourseGoals) => {
+      return currentCourseGoals.filter((goal) => goal.key !== key)
+    });
+  };
+
   return (
     <View style={styles.mainContainer}>
     <GoalInput onAddGoal={addGoalHandler}/>
     <View style={styles.goalContainer}>
       <FlatList data={courseGoal} renderItem={(itemData) => {
-        return <GoalItem text={itemData.item.text}/>
+        return <GoalItem text={itemData.item.text} itemKey={itemData.item.key} onDeleteItem={deleteGoalHandler}/>
         }}/>
     </View>
   </View>
