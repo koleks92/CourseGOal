@@ -20,7 +20,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 2,
         fontSize: 20,
-        borderColor: '#eeeeee'
+        borderColor: '#6247c0',
+        backgroundColor: "#6247c0",
+        borderRadius: 4
       }
 });
 

@@ -19,7 +19,7 @@ function GoalInput (props) {
     <Modal visible={props.visible} animationType="fade">
         <View style={styles.inputContainer} >
         <Image 
-            source={require('../assets/images/logo.png')} 
+            source={require('../assets/images/goal.png')} 
             style={styles.imageLogo}/>
         <TextInput 
             style={styles.textInput}
@@ -30,10 +30,10 @@ function GoalInput (props) {
             <View style={styles.button}>
                 <Button 
                 title="Add goal"
-                onPress={addGoalHandler}/>
+                onPress={addGoalHandler} color="#b180f0"/>
             </View>
             <View style={styles.button}>
-                <Button title="Cancel" onPress={props.onCancel}/>
+                <Button title="Cancel" color="#f31282" onPress={props.onCancel}/>
             </View>
         </View>
         </View>
@@ -56,8 +56,10 @@ const styles = StyleSheet.create({
       textInput: {
         width: '80%',
         borderWidth: 1,
-        borderColor: '#cccccc',
-        backgroundColor: '#ffffff',
+        borderColor: '#e4f0ff',
+        backgroundColor: '#e4d0ff',
+        color: "#120438",
+        borderRadius: 2,
         padding: 6,
         marginBottom: 10,
       },
@@ -69,8 +71,8 @@ const styles = StyleSheet.create({
         marginHorizontal: 8
       },
       imageLogo: {
-        width: '80%',
-        height: '50%',
+        width: 100,
+        height: 100,
         margin: 10,
         
       }
